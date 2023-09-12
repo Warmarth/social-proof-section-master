@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  --font-size: 15px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  max-width: 375px;
+  font-size: var(--font-size);
+  background-color: aquamarine;
+  padding-bottom: 1rem;
+  animation: moveBox 2s linear;
+  transition: all 0.4s ease;
+  background: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: cover;
+}
+.top {
+  text-align: center;
+  padding: 1rem 2rem;
+  color: var(--Very-Dark-Magenta);
+}
+
+.part-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.part-1 h1 {
+  font-size: 2.3rem;
+  word-spacing: 3px;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+.part-1 p {
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 1.5;
+  word-spacing: 3px;
+  font-weight: 500;
+}
+.icon img {
+  width: 15px;
+}
+
+.rate {
+  display: inline-block;
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  word-spacing: 2px;
+  background-color: var(--Light-Grayish-Magenta);
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.icon {
+  margin-bottom: 0.7rem;
+}
+
+.lowertop article {
+  padding: 2rem;
+  margin: 0 2rem 1rem;
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 10px;
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+article div {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  & p {
+    color: var(--Soft-Pink);
+  }
+}
+div img {
+  width: 40px;
+  border-radius: 50%;
+}
+article p {
+  line-height: 1.5;
+  word-spacing: 2px;
+}
+
+@media screen and (min-width: 890px) {
+  main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    background: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-top-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: cover;
+  }
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    text-align: left;
+  }
+  .part-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-self: flex-start;
+    max-width: 375px;
+  }
+  .part-1 h1 {
+    font-size: 2.5rem;
+    max-width: 350px;
+    justify-self: left;
+  }
+  .icon {
+    display: inline;
+    margin-right: 1rem;
+  }
+  .part-2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: end;
+  }
+  .lowertop {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card1 {
+    transform: translateX(-90px);
+  }
+  .card2 {
+    transform: translateX(-45px);
+  }
+  .card3 {
+    transform: translateX(0px);
+  }
+  .card-1 {
+    transform: translateY(-30px);
+  }
+  .card-2 {
+    transform: translateY(-15px);
+  }
+  .card-3 {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.element0 {
+  animation: cssAnimation_1 888ms 1 linear 1353ms;
+}
+
+@keyframes cssAnimation_1 {
+  0% {
+    transform: translateX(140px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.element1 {
+  animation: cssAnimation_b 888ms 1 linear 1353ms;
+}
+
+@keyframes cssAnimation_b {
+  0% {
+    transform: translateX(-440px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+.element {
+  animation: cssAnimation_0 888ms 1 linear 1353ms;
+}
+
+@keyframes cssAnimation_0 {
+  0% {
+    transform: translateY(440px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
