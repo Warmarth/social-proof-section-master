@@ -118,6 +118,7 @@ article p {
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
+    padding: 1rem 3rem;
   }
   .top {
     display: grid;
